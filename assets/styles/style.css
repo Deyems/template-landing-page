@@ -215,6 +215,7 @@ body{
 /*Why Decagon Section*/
 .why-decagon{
     background: var(--white--bg);
+    /* border: 1px solid skyblue; */
 }
 
 .why-decagon>*{
@@ -223,31 +224,80 @@ body{
 }
 
 .why-title{
-    padding: 1rem 0;
+    padding: 2rem 0;
+    line-height: 42px;
+    font-family: Mulish800;
+    font-size: 2.25rem;
+    /* border: 1px solid blue; */
 }
 
 .why-container{
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .flexa{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: inherit;
+    width: 35%;
 }
 
 .flexa img{
     display: block;
     width: 100%;
-    height: inherit;
+    height: 100%;
 }
 
 .why-container-notes{
-    padding: 2rem;
-    border: 1px solid yellow;
+    width: 65%;
+    /* border: 1px solid yellow; */
 }
 
 .flexb{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.flexb-1{
+    padding: 2.5rem 5.4vmax;
+    /* border: 1px solid red; */
+    flex: 1;
+}
+
+.flexb-1 h3{
+    font-family: Mulish700;
+    /* font-size: 1.5rem; */
+    line-height: 1.875rem;
+}
+
+.flexb-1 p{
+    line-height: 1.5rem;
+    opacity: var(--text-opacity);
+    /* border: 1px solid brown; */
+}
+
+.flexb-1 span{
+    font-weight: bolder;
+    /* opacity: 1; */
+}
+
+.why-label{
+    /* border: 1px solid yellow; */
+    width: 100%;
+    padding: 1.5rem 0;
+    margin-top: 1.5rem;
+}
+
+.why-label p{
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    line-height: 2.125rem;
+    font-size: 1.5rem;
+    color: var(--greyed-text-color);
+}
+
+.testimonial-leadership{
+    background: var(--gradient-bg);
+    border: 1px solid red;
 }
