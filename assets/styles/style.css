@@ -10,11 +10,15 @@
     --greyed-text-color: #2C3134;
     --text-opacity: 0.6;
     --greyed-bg: #F9FAFB;
+    --greyed-arrow-bg: #E6E6E6;
     --gradient-bg: linear-gradient(180deg, #F9FAFB 0%, #F5F9E7 100%);
     --bg-opacity: 0.7;
     --header-bg: #000000;
     --link-hover-color: #34A853;
     --tinted-text: #B8D344;
+    --round-btn: #C4C4C4;
+    --active-round-btn:#7C7C7C;
+    --green-bg: #35A555;
 }
 
 @font-face {
@@ -32,6 +36,10 @@
 @font-face {
     font-family: Mulish500;
     src: url('../fonts/Mulish/static/Mulish-Medium.ttf');
+}
+@font-face {
+    font-family: Mulish600;
+    src: url('../fonts/Mulish/static/Mulish-SemiBold.ttf');
 }
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -64,8 +72,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 0 0.5rem 0;
-    /* padding-right: 0; */
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 90%;
     box-sizing: border-box;
 }
@@ -297,7 +304,296 @@ body{
     color: var(--greyed-text-color);
 }
 
+/**Testimonial Leadership Section */
 .testimonial-leadership{
     background: var(--gradient-bg);
-    border: 1px solid red;
+    /* border: 1px solid blue; */
+    padding: 2rem 0;
 }
+
+.testimonial-leadership>*{
+    width: 90%;
+    margin: auto;
+}
+
+.video-testifier{
+    display: flex;
+    /* border: 1px solid pink; */
+    padding: 3.5rem 0;
+}
+
+.img-testifier{
+    position: relative;
+    /* border: 1px solid lawngreen; */
+}
+
+.play-btn{
+    position: absolute;
+    /* border: 1px solid green; */
+    top: 75%;
+    left: 82%;
+}
+
+.testifier-text-wrapper{
+    /* border: 1px solid red; */
+    padding: 0 2rem;
+}
+
+.directions{
+    /* border: 1px solid white; */
+    height: auto;
+}
+
+.flexable{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top:  0.5px solid rgba(0, 0, 0, 0.30);
+}
+
+.arrow-btns-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid crimson; */
+    width: 9%;
+}
+
+.arrow-btns-circle{
+    border-radius: 50%;
+    /* width: 2rem; */
+    /* padding: 0.2rem 0.6rem; */
+    padding: 0.4rem;
+    background-color: var(--greyed-arrow-bg);
+    cursor: pointer;
+    text-align: center;
+}
+
+.arrow-btns-wrapper>:first-child img{
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.testifier-text{
+    /* border: 1px solid yellow; */
+    margin: 1rem 0;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.hide{
+    display: none;
+}
+
+.testifier-text-content{
+    padding: 1rem 0;
+    margin: 1rem 0;
+    width: 77%;
+}
+
+.testifier-text-content p{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.testifier-text-content h3{
+    margin-top: 3rem;
+    opacity: 0.8;
+    font-size: 1.25rem;
+}
+
+.testifier-text-content h5{
+    opacity: 0.5;
+    font-size: 0.9375rem;
+}
+
+.dots-wrapper{
+    /* border: 1px solid red; */
+    padding: 1rem 0.5rem;
+    display: flex;
+}
+
+.dots{
+    border-radius: 50%;
+    padding: 0.4rem;
+    margin: 0 0.1rem;
+    background-color: var(--greyed-arrow-bg);
+}
+
+.dots:hover{
+    cursor: pointer;
+}
+
+.dots.active{
+    background: var(--active-round-btn);
+}
+
+
+/**Leadership Section*/
+.decagon-leaders-header{
+    text-align: center;
+    font-size: 2.25rem;
+    font-family: Mulish800;
+    line-height: 2.625rem;
+    color: var(--greyed-text-color);
+}
+
+.leaders{
+    display: flex;
+    justify-content: space-between;
+    margin: 2.8rem 0;
+}
+
+.leader-card{
+    background: var(--white--bg);
+    padding: 1.5rem 2.0rem;
+    flex: 1;
+    margin: 0 1.5rem;
+    /* width: 404px; */
+    /* width: 25.25rem; */
+}
+
+.leader-card:nth-of-type(1){
+    /* border: 1px solid skyblue; */
+    margin-left: 0;
+}
+
+.leader-card:nth-of-type(3){
+    /* border: 1px solid green; */
+    margin-right: 0;
+}
+
+.leader-card>*{
+    /* border: 1px solid brown; */
+    width: 90%;
+}
+
+.name-role>*{
+    margin: 0.7rem 0;
+}
+.name-role h3{
+    /* font-size: 1.5rem; */
+    font-family: Mulish600;
+    line-height: 1.875rem;
+}
+
+.name-role p{
+    line-height: 1.5rem;
+    line-height: 1.25rem;
+    color: var(--greyed-text-color);
+    opacity: 0.5;
+}
+
+.experience ul{
+    list-style-type: none;
+    /* border: 1px solid grey; */
+}
+
+.experience ul li{
+    margin: 0.7rem 0;
+    color: var(--greyed-text-color);
+    line-height: 1.25rem;
+    display: inline-flex;
+}
+
+.experience ul li span{
+    margin-right: 0.8rem;
+}
+
+.experience{
+    height: 20rem;
+    /* border: 1px solid pink; */
+}
+
+.linkedIn{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid blueviolet; */
+}
+
+.linkedIn>:first-child{
+    margin-right: 1rem;
+}
+
+.load-all{
+    border: 1px solid var(--text-color);
+    opacity: 0.9;
+    margin: 1.4rem auto;
+    display: none;
+}
+
+.load-all p{
+    margin: auto;
+    padding: 1rem 2.5rem;
+    text-align: center;
+    /* border: 1px solid red; */
+    font-size: 0.8125rem;
+    cursor: pointer;
+}
+
+/*New Section: partners-skills */
+.partners-skills{
+    background: var(--white--bg);
+    padding: 2rem 0;
+}
+
+.partners-skills-header{
+    text-align: center;
+    color: var(--link-hover-color);
+    /* border: 1px solid red; */
+    padding: 1rem 0;
+}
+
+.partners{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid blue; */
+    margin: auto;
+    padding: 1.5rem 3rem;
+}
+
+.skill-bank{
+    background: var(--green-bg);
+    color: var(--gen-white-text);
+    width: 90%;
+    margin: 1.4rem auto;
+    padding: 2.5rem 0;
+}
+
+.skill-bank h2{
+    font-family: Mulish800;
+    text-align: center;
+    line-height: 2.625rem;
+    font-size: 2.25rem;
+}
+
+.skill-bank h4{
+    text-align: center;
+    opacity: var(--text-opacity);
+    line-height: 2.375rem;
+    font-size: 1.5625rem;
+    margin: 1rem 0;
+}
+
+.skill-bank-wrap{
+    display: flex;
+}
+
+.skill-bank-list{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    padding: 3rem 0rem;
+    /* border: 1px solid red; */
+}
+
+.skill-bank-list ul li{
+    /* margin: 1rem 0; */
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: lighter;
+}
+
+/**
+In the Media Section
+*/
