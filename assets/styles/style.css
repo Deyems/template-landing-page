@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    --btn-colored: linear-gradient(96.67deg, #34A853 0%, #B8D344 100%);
+    --gen-white-text: #FFFFFF;
+    --white--bg: #FFFFFF;
+    --text-color: #000000;
+    --greyed-text-color: #2C3134;
+    --text-opacity: 0.6;
+    --greyed-bg: #F9FAFB;
+    --gradient-bg: linear-gradient(180deg, #F9FAFB 0%, #F5F9E7 100%);
+    --bg-opacity: 0.7;
+    --header-bg: #000000;
+    --link-hover-color: #34A853;
+    --tinted-text: #B8D344;
+}
+
+@font-face {
+    font-family: Mulish800;
+    src: url('../fonts/Mulish/static/Mulish-ExtraBold.ttf');
+}
+@font-face {
+    font-family: Mulish400;
+    src: url("../fonts/Mulish/static/Mulish-Regular.ttf");
+}
+@font-face {
+    font-family: Mulish700;
+    src: url('../fonts/Mulish/static/Mulish-Bold.ttf');
+}
+@font-face {
+    font-family: Mulish500;
+    src: url('../fonts/Mulish/static/Mulish-Medium.ttf');
+}
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: Mulish400, sans-serif;
+    /* border: 1px solid red; */
+    position: relative;
+}
+
+.header-with-bg{
+    background: var(--header-bg) url("../images/lagostechie-unsplash1.png") no-repeat fixed center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem 3.5rem;
+    position: relative;
+}
+
+/*Navbar Stuffs start*/
+.navbar{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0 0.5rem 0;
+    /* padding-right: 0; */
+    border: 2px solid green;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.logo-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+    padding: 0 0rem 1rem 0;
+    width: 100%;
+    /* padding-left: 0; */
+}
+
+.menu{
+    min-width: 40%;
+}
+
+.menu-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-links{
+    /* display: block; */
+    /* border: 1px solid yellow; */
+    color: var(--gen-white-text);
+    padding: 0.5rem;
+    margin: 0 1rem;
+    font-family: Mulish400;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+}
+
+.menu-links:hover{
+    color: var(--link-hover-color);
+}
+
+.shaded{
+    background-color: var(--gen-white-text);
+    color: var(--text-color);
+    font-size: 0.75rem;
+    line-height: 0.9375rem;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.harmburger{
+    /* border: 1px solid red; */
+    width: 3.5rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.line{
+    height: 3px;
+    background-color: var(--gen-white-text);
+    margin: 0.7rem 0.4rem;
+}
+
+/*End of Navbar Stuffs*/
+
+/*Header Centered Text starts*/
+.header-text,.header-btn{
+    margin: auto;
+    text-align: center;
+}
+
+.header-text{
+    margin-top: 12rem;
+    width: 80%;
+    color: var(--gen-white-text);
+}
+
+.painted{
+    color: var(--tinted-text);
+}
+
+.header-text h1{
+    font-family: Mulish800;
+    /* font-size: 3.4375rem; */
+    font-size: 3.9vmax;
+    line-height: 69.03px
+}
+
+.header-text h5{
+    /* font-size: 1.5625rem; */
+    font-size: 1.8vmax;
+    line-height: 38px;
+    width: 70%;
+    margin: auto;
+    margin-top: 1.2rem;
+    /* text-align: center; */
+    /* border: 1px solid red; */
+}
+
+.header-btn{
+    /* border: 1px solid red; */
+    margin: 7rem 0;
+    padding: 0.8rem;
+    margin-bottom: 5rem;
+}
+
+.build-team-btn{
+    background: var(--btn-colored);
+    color: var(--gen-white-text);
+    text-align: center;
+    padding: 0.8rem 2rem;
+    margin: 10px 0;
+}
+
+/*Section for Organizations Decagon has worked With*/
+.hiring-organizations{
+    /* border: 1px solid red; */
+    
+    padding: 2.5rem 4rem;
+    background-color: var(--greyed-bg);
+}
+
+.hire-org-cover{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid blue; */
+    color: var(--greyed-text-color);
+}
+
+.hire-org-cover>:first-child{
+    /* border: 1px solid yellow; */
+    flex: 1;
+}
+
+.hire-org-cover>:last-child{
+    /* border: 1px solid red; */
+    flex: 2;
+}
+
+.companies{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid green; */
+}
+
+/*Why Decagon Section*/
+.why-decagon{
+    background: var(--white--bg);
+}
+
+.why-decagon>*{
+    width: 90%;
+    margin: auto;
+}
+
+.why-title{
+    padding: 1rem 0;
+}
+
+.why-container{
+    display: flex;
+    border: 1px solid red;
+}
+
+.flexa{
+    border: 1px solid green;
+    height: inherit;
+}
+
+.flexa img{
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+
+.why-container-notes{
+    padding: 2rem;
+    border: 1px solid yellow;
+}
+
+.flexb{
+    display: flex;
+    justify-content: space-between;
+}

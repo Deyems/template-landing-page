@@ -5,36 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decagon</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet"> -->
     <script src="assets/scripts/main.js" defer></script>
 </head>
 <body>
     <div class="wrappper">
         <header class="header-with-bg">
-            <nav>
-                <div class="logo">
-                    <figure>
-                        <img src="assets/images/decagonlogo.svg" alt="Decagon logo">
-                    </figure>
-                </div>
-                <div class="menu">
-                    <div class="desktop-menu">
-                        <ul>
-                            <li><a href="">For Developers</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="" class="shaded">Get Started</a></li>
-                        </ul>
+
+            <nav class="navbar">
+                <div class="logo-menu">
+                    <div class="logo">
+                        <figure>
+                            <img src="assets/images/decagonlogo.svg" alt="Decagon logo">
+                        </figure>
                     </div>
-                    <div class="mobile-menu">
-                        <ul>
-                            <li><a href="">For Developers</a></li>
-                            <li><a href="">Blog</a></li>
-                            <li><a href="" class="shaded">Get Started</a></li>
-                        </ul>
-                        <div class="harmburger">
-                            <div class="line"></div>
-                            <div class="line"></div>
-                            <div class="line"></div>
-                        </div>
+                    <div class="menu">
+                        
+                            <ul class="menu-list">
+                                <li><a href="" class="menu-links">For Developers</a></li>
+                                <li><a href="" class="menu-links">Blog</a></li>
+                                <li><a href="" class="menu-links shaded">Get Started</a></li>
+                            </ul>
+                        
+                    </div>
+                </div>
+                
+                <div class="mobile-menu">
+                    <div class="harmburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
                     </div>
                 </div>
             </nav>
@@ -47,53 +48,60 @@
             </div>
         </header>
         <section class="hiring-organizations">
-            <div class="companies">
-                <div></div>
-                <figure>
-                    <img src="assets/images/merck.svg" alt="merck">
-                </figure>
-                <figure>
-                    <img src="assets/images/nike.svg" alt="nike">
-                </figure>
-                <figure>
-                    <img src="assets/images/mastercard.svg" alt="mastercard">
-                </figure>
-                <figure>
-                    <img src="assets/images/vertex.svg" alt="vertex">
-                </figure>
-                <figure>
-                    <img src="assets/images/budweisser.svg" alt="budweisser">
-                </figure>
-                <figure>
-                    <img src="assets/images/nokia.svg" alt="nokia">
-                </figure>
+            <div class="hire-org-cover">
+                <div>Our Engineers have built products for</div>
+                <div class="companies">
+                    <figure>
+                        <img src="assets/images/merck.svg" alt="merck">
+                    </figure>
+                    <figure>
+                        <img src="assets/images/nike.svg" alt="nike">
+                    </figure>
+                    <figure>
+                        <img src="assets/images/mastercard.svg" alt="mastercard">
+                    </figure>
+                    <figure>
+                        <img src="assets/images/vertex.svg" alt="vertex">
+                    </figure>
+                    <figure>
+                        <img src="assets/images/budweisser.svg" alt="budweisser">
+                    </figure>
+                    <figure>
+                        <img src="assets/images/nokia.svg" alt="nokia">
+                    </figure>
+                </div>
             </div>
         </section>
+
         <section class="why-decagon">
             <div class="why-title">Why Decagon?</div>
             <div class="why-container">
                 <figure class="flexa">
                     <img src="assets/images/Work_Space.png" alt="workspace">
                 </figure>
-                <div class="flexb">
-                    <div class="flexb-1">
-                        <h3>Engineering quality</h3>
-                        <p>We select and recruit the top 0.5% of tech talent in the cities we source from. We run our own Software Engineering Training institute which is #1 in Africa.</p>
+                <div class="why-container-notes">
+                    <div class="flexb">
+                        <div class="flexb-1">
+                            <h3>Engineering quality</h3>
+                            <p>We select and recruit the top 0.5% of tech talent in the cities we source from. We run our own Software Engineering Training institute which is #1 in Africa.</p>
+                        </div>
+                        <div class="flexb-1">
+                            <h3>Easy to work with</h3>
+                            <p>Our engineers are all Native English speakers, they work on your time-zone and will easily adopt your collaboration tools and practices</p>
+                        </div>
                     </div>
-                    <div class="flexb-1">
-                        <h3>Easy to work with</h3>
-                        <p>Our engineers are all Native English speakers, they work on your time-zone and will easily adopt your collaboration tools and practices</p>
-                    </div>
-                    <div class="flexb-1">
-                        <h3>Diverse talent base</h3>
-                        <p><span>More Black Talent:</span> Through our operations in Africa we are able to give you access to high quality engineers from under-represented backgrounds.</p>
-                        <p><span>More Female Talent:</span> We have an ambitious goal to be 50% female by 2025.</p>
-                    </div>
-                    <div class="flexb-1">
-                        <h3>Cost-effective scaling</h3>
-                        <p> We help you access talent in regions where there is more available supply of top-tier talent. <br/>
-                            Customized on-boarding - we can design a risk-free custom onboarding sprint to get your team production ready in your environment
-                        </p>
+                    <div class="flexb">
+                        <div class="flexb-1">
+                            <h3>Diverse talent base</h3>
+                            <p><span>More Black Talent:</span> Through our operations in Africa we are able to give you access to high quality engineers from under-represented backgrounds.</p>
+                            <p><span>More Female Talent:</span> We have an ambitious goal to be 50% female by 2025.</p>
+                        </div>
+                        <div class="flexb-1">
+                            <h3>Cost-effective scaling</h3>
+                            <p> We help you access talent in regions where there is more available supply of top-tier talent. <br/>
+                                Customized on-boarding - we can design a risk-free custom onboarding sprint to get your team production ready in your environment
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
