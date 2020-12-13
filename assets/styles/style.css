@@ -4,21 +4,25 @@
     text-decoration: none;
     box-sizing: border-box;
     --btn-colored: linear-gradient(96.67deg, #34A853 0%, #B8D344 100%);
-    --gen-white-text: #FFFFFF;
-    --white--bg: #FFFFFF;
-    --text-color: #000000;
-    --greyed-text-color: #2C3134;
+    --gen-white-text:#FFFFFF;
+    --white--bg:#FFFFFF;
+    --text-color:#000000;
+    --greyed-text-color:#2C3134;
     --text-opacity: 0.6;
     --greyed-bg: #F9FAFB;
     --greyed-arrow-bg: #E6E6E6;
     --gradient-bg: linear-gradient(180deg, #F9FAFB 0%, #F5F9E7 100%);
     --bg-opacity: 0.7;
-    --header-bg: #000000;
+    --header-bg:#000000;
     --link-hover-color: #34A853;
-    --tinted-text: #B8D344;
-    --round-btn: #C4C4C4;
-    --active-round-btn:#7C7C7C;
-    --green-bg: #35A555;
+    --tinted-text:#B8D344;
+    --round-btn:#C4C4C4;
+    --copy-right-greyed: #AFB5C0;
+    --active-round-btn: #7C7C7C;
+    --green-bg:#35A555;
+    --light-blue-bg:#F9FAFB;
+    --picture-overlay-gradient: linear-gradient(359.8deg, #34A853 0.12%, rgba(52, 168, 83, 0) 99.77%);
+    --dark-bg: #000000;
 }
 
 @font-face {
@@ -55,6 +59,16 @@ body{
     position: relative;
 }
 
+.build-team-btn{
+    background: var(--btn-colored);
+    color: var(--gen-white-text);
+    text-align: center;
+    padding: 0.8rem 2rem;
+    margin: 10px 0;
+}
+
+/*End of General stylings here*/
+
 .header-with-bg{
     background: var(--header-bg) url("../images/lagostechie-unsplash1.png") no-repeat fixed center;
     background-size: cover;
@@ -82,13 +96,14 @@ body{
     justify-content: space-between;
     align-items: center;
     /* border: 1px solid red; */
-    padding: 0 0rem 1rem 0;
+    padding: 1rem 0rem 1rem 0;
     width: 100%;
     /* padding-left: 0; */
 }
 
 .menu{
-    min-width: 40%;
+    min-width: 25%;
+    /* border: 1px solid red; */
 }
 
 .menu-list{
@@ -178,13 +193,7 @@ body{
     margin-bottom: 5rem;
 }
 
-.build-team-btn{
-    background: var(--btn-colored);
-    color: var(--gen-white-text);
-    text-align: center;
-    padding: 0.8rem 2rem;
-    margin: 10px 0;
-}
+
 
 /*Section for Organizations Decagon has worked With*/
 .hiring-organizations{
@@ -597,3 +606,194 @@ body{
 /**
 In the Media Section
 */
+.media{
+    background: var(--light-blue-bg);
+    opacity: var(--bg-opacity);
+    padding: 4rem 0;
+}
+.media>*{
+    width: 90%;
+    margin: auto;
+}
+
+.media-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    /* border: 1px solid white; */
+}
+
+.media-header h2{
+    font-family: Mulish800;
+    font-size: 2.25rem;
+    line-height: 2.8125rem;
+    color: #000000;
+    font-weight: bold;
+}
+
+.media-header a{
+    color: var(--link-hover-color);
+}
+
+.media-pages{
+    display: flex;
+    justify-content: space-between;
+}
+
+.media-card{
+    height: 36.75rem;
+    width: 405px;
+    margin: 0 1.5rem;
+    flex: 1;
+}
+
+.media-card:nth-of-type(1){
+    margin-left: 0;
+}
+
+.media-card:nth-of-type(3){
+    margin-right: 0;
+}
+
+.card1{
+    background: url("../images/afigbo-archibong-zuckerberg.png") no-repeat center;
+    background-size: cover;
+}
+
+.media-overlay{
+    background: var(--picture-overlay-gradient);
+    /* border: 1px solid red; */
+    height: inherit;
+}
+
+.media-top{
+    height: 68%;
+    /* border: 1px solid brown; */
+}
+
+.media-bottom{
+    padding: 2rem;
+    color: var(--gen-white-text);
+}
+
+.media-bottom h3{
+    font-size: 1.3rem;
+    line-height: 1.875rem;
+    /* border: 1px solid yellow; */
+    height: 6.5rem;
+}
+
+.media-bottom a{
+    display: block;
+    color: var(--gen-white-text);
+}
+
+.card2{
+    background: url("../images/Governor-Godwin-Obaseki-of-Edo-state-1-696x609.png") no-repeat center;
+    background-size: cover;
+}
+
+.card3{
+    background: url("../images/toptal-blog-image.png") no-repeat center;
+    background-size: cover;
+}
+
+/**
+    FOOTER here
+**/
+.footer{
+    background: var(--greyed-text-color);
+}
+
+.footer>*{
+    width: 90%;
+    margin: auto;
+}
+
+.build-team{
+    text-align: center;
+    color: var(--gen-white-text);
+    padding: 5rem 3rem;
+    /* border: 1px solid yellow; */
+    border-bottom: 0.5px solid var(--gen-white-text);
+}
+
+.build-team h2{
+    font-family: Mulish800;
+    font-size: 3.125rem;
+    line-height: 0rem;
+    color: var(--gen-white-text);
+    /* border: 1px solid red; */
+    margin: 2.5rem 0;
+}
+
+.build-team div{
+    padding: 4rem 3rem;
+    /* border: 1px solid red; */
+    margin: 1rem 0;
+}
+
+.footer-links{
+    display: flex;
+    /* border: 1px solid white; */
+    padding: 4rem 0 8rem 0;
+}
+
+.social-media-icons{
+    display: flex;
+}
+
+.footer-links>*{
+    flex: 1;
+    /* border: 1px solid red; */
+}
+
+.nav-links{
+    display: flex;
+    color: var(--gen-white-text);
+}
+.nav-links h2{
+    font-size: 1rem;
+    line-height: 1.875rem;
+    color: var(--gen-white-text);
+}
+
+.nav-links a{
+    color: var(--gen-white-text);
+    line-height: 1.875rem;
+    font-size: 0.875rem;
+    margin: 0.5rem 0;
+}
+
+.nav-links p,.nav-links span{
+    line-height: 1.875rem;
+    font-size: 0.875rem;
+    margin: 0.5rem 0;
+}
+
+.info-location{
+    display: flex;
+    flex: 2;
+    justify-content: space-evenly;
+}
+
+.contact-us{
+    flex: 1;
+}
+
+.copyright{
+    color: var(--copy-right-greyed);
+}
+
+
+.highlighted{
+    color: var(--green-bg);
+}
+
+.mobile-footer-links{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    display: none;
+}
