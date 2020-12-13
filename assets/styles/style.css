@@ -52,7 +52,9 @@ footer, header, hgroup, menu, nav, section {
 ul{
     list-style: none;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     font-family: Mulish400, sans-serif;
     /* border: 1px solid red; */
@@ -60,11 +62,12 @@ body{
 }
 
 .build-team-btn{
-    background: var(--btn-colored);
+    /* background: var(--btn-colored); */
     color: var(--gen-white-text);
     text-align: center;
     padding: 0.8rem 2rem;
     margin: 10px 0;
+    /* width: 100%; */
 }
 
 /*End of General stylings here*/
@@ -120,10 +123,13 @@ body{
     font-family: Mulish400;
     font-size: 0.875rem;
     line-height: 1.125rem;
+    transition: all 0.45s ease;
+    /* border: 1px solid green; */
 }
 
 .menu-links:hover{
     color: var(--link-hover-color);
+    border-left: 3px solid var(--copy-right-greyed);
 }
 
 .shaded{
@@ -131,6 +137,14 @@ body{
     color: var(--text-color);
     font-size: 0.75rem;
     line-height: 0.9375rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.shaded:hover{
+    background-color: var(--green-bg);
+    color: var(--gen-white-text);
+    border: 2px solid var(--gen-white-text);
+    border-radius: 6px;
 }
 
 .mobile-menu{
@@ -187,13 +201,45 @@ body{
 }
 
 .header-btn{
-    /* border: 1px solid red; */
-    margin: 7rem 0;
+    border: 1px solid var(--gen-white-text);
+    margin: 7rem auto;
     padding: 0.8rem;
     margin-bottom: 5rem;
+    position: relative;
+    width: 30%;
 }
 
 
+
+.overlay-header-btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background-color: #008CBA; */
+    background: var(--btn-colored);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+    z-index: 1;
+}
+
+.header-btn:hover .overlay-header-btn, .footer-btn:hover .overlay-header-btn {
+    width: 100%;
+}
+
+.text {
+  color: var(--gen-white-text);
+  /* font-size: 1.25rem; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
 
 /*Section for Organizations Decagon has worked With*/
 .hiring-organizations{
@@ -457,8 +503,15 @@ body{
     padding: 1.5rem 2.0rem;
     flex: 1;
     margin: 0 1.5rem;
+    transition: all .45s ease;
     /* width: 404px; */
     /* width: 25.25rem; */
+}
+
+.leader-card:hover{
+    box-shadow: 0px 0px 10px rgba(209, 209, 209, 0.3);
+    /* transform: scaleY(1.05); */
+    transform: translateY(-5%);
 }
 
 .leader-card:nth-of-type(1){
@@ -646,6 +699,12 @@ In the Media Section
     width: 405px;
     margin: 0 1.5rem;
     flex: 1;
+    /* border: 1px solid red; */
+    /* transition: all 1.5s ease; */
+}
+
+.media-card:hover{
+    cursor: pointer;
 }
 
 .media-card:nth-of-type(1){
@@ -663,8 +722,23 @@ In the Media Section
 
 .media-overlay{
     background: var(--picture-overlay-gradient);
+    background: transparent;
+    /* transition: all 4s ease; */
+    /* opacity: 0; */
     /* border: 1px solid red; */
     height: inherit;
+}
+
+.media-overlay>*{
+    transition: all 0.5s ease;
+}
+
+.media-card:hover .media-overlay{
+    background: var(--picture-overlay-gradient);
+}
+
+.media-card:hover .media-bottom{
+    transform: translateY(-5%);
 }
 
 .media-top{
@@ -728,10 +802,18 @@ In the Media Section
     margin: 2.5rem 0;
 }
 
-.build-team div{
-    padding: 4rem 3rem;
+.build-team>div{
+    padding: 3rem 3rem;
     /* border: 1px solid red; */
     margin: 1rem 0;
+}
+
+.footer-btn{
+    position: relative;
+    border: 1px solid var(--gen-white-text);
+    width: 25%;
+    margin: 1rem auto;
+    padding: 1rem 0;
 }
 
 .footer-links{
@@ -764,6 +846,11 @@ In the Media Section
     line-height: 1.875rem;
     font-size: 0.875rem;
     margin: 0.5rem 0;
+    transition: all 0.45s ease;
+}
+
+.nav-links a:hover{
+    color: var(--link-hover-color);
 }
 
 .nav-links p,.nav-links span{
