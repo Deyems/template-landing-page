@@ -1,3 +1,4 @@
+AOS.init();
 //Do  Slide show Here
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -18,51 +19,14 @@ function showSlides(n) {
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
-    //   slides[i].style.marginRight = "-100%";
-
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
-//   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
 
-//Script to Animate Text
-// Wrap every letter in a span
-// var textWrapper = document.querySelector('.ml11 .letters');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
-
-// anime.timeline({loop: true})
-//   .add({
-//     targets: '.ml11 .line',
-//     scaleY: [0,1],
-//     opacity: [0.5,1],
-//     easing: "easeOutExpo",
-//     duration: 700
-//   })
-//   .add({
-//     targets: '.ml11 .line',
-//     translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
-//     easing: "easeOutExpo",
-//     duration: 700,
-//     delay: 100
-//   })
-//   .add({
-//     targets: '.ml11 .letter',
-//     opacity: [0,1],
-//     easing: "easeOutExpo",
-//     duration: 2000,
-//     offset: '-=775',
-//     delay: (el, i) => 34 * (i+1)
-//   }).add({
-//     targets: '.ml11',
-//     opacity: 0,
-//     duration: 700,
-//     easing: "easeOutExpo",
-//     delay: 1000
-//   });
 
 //ANother script to animate second line in the header
   //Text Coming Out Gradually
@@ -116,9 +80,4 @@ function showSlides(n) {
         new TxtRotate(elements[i], JSON.parse(toRotate), period);
       }
     }
-    // INJECT CSS
-    // var css = document.createElement("style");
-    // css.type = "text/css";
-    // css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
-    // document.body.appendChild(css);
   };
