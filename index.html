@@ -40,7 +40,34 @@
                 </div>
             </nav>
             <div class="header-text">
-                <h1>Build faster with <span class="painted">vetted</span> remote software engineering talent.</h1>
+                <!-- <h1 class="ml11">
+                    <span class="text-wrapper">
+                       <span class="line line1"></span>
+                      <span class="letters">Build faster with <span class="painted">vetted</span> remote software engineering talent</span>
+                    </span>
+                  </h1> -->
+                  <h1>Build faster with
+                    <span
+                       class="txt-rotate"
+                       data-period="2000"
+                       data-rotate='[ "vetted", "evaluated", "assesssed", "examined", "trained" ]'></span>
+                       remote software engineering talent.
+                  </h1>
+                <!-- <h1>Build faster with <span class="painted">vetted</span> remote software engineering talent.</h1> -->
+                <!-- <h5 class="ml11">
+                    <span class="text-wrapper">
+                      <span class="line line1"></span>
+                      <span class="letters">Recruiting, training, HR management and work infrastructure to help you scale quickly and cost effectively.</span>
+                    </span>
+                  </h5> -->
+
+                  <!-- <h5>
+                    <span
+                       class="txt-rotate"
+                       data-period="2000"
+                       data-rotate='[ "Recruiting,", "training,", "HR management", "and work infrastructure" ]'></span>
+                       to help you scale quickly and cost effectively.
+                  </h5> -->
                 <h5>Recruiting, training, HR management and work infrastructure to help you scale quickly and cost effectively.</h5>
             </div>
             <div class="header-btn">
@@ -128,36 +155,36 @@
                     <div class="directions flexable">
                         <div></div>
                         <div class="arrow-btns-wrapper">
-                            <div class="left-btn arrow-btns-circle">
+                            <div class="left-btn arrow-btns-circle" onclick="plusSlides(-1)">
                                 <img src="assets/images/arrowbtn.svg" alt="left arrow button">
                             </div>
-                            <div class="right-btn arrow-btns-circle">
+                            <div class="right-btn arrow-btns-circle" onclick="plusSlides(1)">
                                 <img src="assets/images/arrowbtn.svg" alt="right arrow button">
                             </div>
                         </div>
                     </div>
                     <div class="testifier-text">
-                        <div class="testifier-text-content">
+                        <div class="testifier-text-content fade">
                             <p>“With Decagon, we save an estimated 50 hours per week that used to be spent answering email and attending check-in meetings.”</p>
                             <h3>Arinze Thomason</h3>
                             <h5>COO Paystack</h5>
                         </div>
-                        <div class="testifier-text-content hide">
+                        <div class="testifier-text-content fade">
                             <p>“With Decagon, we save an estimated 50 hours per week that used to be spent answering email and attending check-in meetings.”</p>
                             <h3>Arinze Thomason2</h3>
                             <h5>COO Paystack</h5>
                         </div>
-                        <div class="testifier-text-content hide">
+                        <div class="testifier-text-content fade">
                             <p>“With Decagon, we save an estimated 50 hours per week that used to be spent answering email and attending check-in meetings.”</p>
                             <h3>Arinze Thomason3</h3>
                             <h5>COO Paystack</h5>
                         </div>
-                        <div class="testifier-text-content hide">
+                        <div class="testifier-text-content fade">
                             <p>“With Decagon, we save an estimated 50 hours per week that used to be spent answering email and attending check-in meetings.”</p>
                             <h3>Arinze Thomason4</h3>
                             <h5>COO Paystack</h5>
                         </div>
-                        <div class="testifier-text-content hide">
+                        <div class="testifier-text-content fade">
                             <p>“With Decagon, we save an estimated 50 hours per week that used to be spent answering email and attending check-in meetings.”</p>
                             <h3>Arinze Thomason5</h3>
                             <h5>COO Paystack</h5>
@@ -167,11 +194,11 @@
                     <div class="flipping flexable">
                         <div></div>
                         <div class="dots-wrapper">
-                            <div class="dots"></div>
-                            <div class="dots"></div>
-                            <div class="dots"></div>
-                            <div class="dots"></div>
-                            <div class="dots active"></div>
+                            <div class="dots" onclick="currentSlide(1)"></div>
+                            <div class="dots" onclick="currentSlide(2)"></div>
+                            <div class="dots" onclick="currentSlide(3)"></div>
+                            <div class="dots" onclick="currentSlide(4)"></div>
+                            <div class="dots active" onclick="currentSlide(5)"></div>
                         </div>
                     </div>
                 </div>
@@ -483,5 +510,6 @@
             </section>
         </footer>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </body>
 </html>

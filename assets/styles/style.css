@@ -45,6 +45,7 @@
     font-family: Mulish600;
     src: url('../fonts/Mulish/static/Mulish-SemiBold.ttf');
 }
+/*General Styles here*/
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -178,14 +179,12 @@ body{
     color: var(--gen-white-text);
 }
 
-.painted{
-    color: var(--tinted-text);
-}
+
 
 .header-text h1{
     font-family: Mulish800;
     /* font-size: 3.4375rem; */
-    font-size: 3.9vmax;
+    font-size: 3.7vmax;
     line-height: 69.03px
 }
 
@@ -200,7 +199,45 @@ body{
     /* border: 1px solid red; */
 }
 
-.header-btn{
+/*Styling to Animate Text header here*/
+.ml11 {
+    font-weight: 700;
+    /* font-size: 3.0em; */
+  }
+  
+  .ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #fff;
+    transform-origin: 0 50%;
+  }
+  
+  .ml11 .line1 { 
+    top: 0; 
+    left: 0;
+  }
+  
+  .ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+  .painted{
+    color: var(--tinted-text);
+    }
+/**End of Styling for Animating Header Text!*/
+
+  .header-btn{
     border: 1px solid var(--gen-white-text);
     margin: 7rem auto;
     padding: 0.8rem;
@@ -440,10 +477,31 @@ body{
 }
 
 .testifier-text-content{
+    /* display: none; */
     padding: 1rem 0;
     margin: 1rem 0;
     width: 77%;
+    transition: all 0.5s ease;
+    /* border: 1px solid red; */
+    box-shadow: 4px 4px 12px rgba(231, 219, 219, 0.3);
 }
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
 
 .testifier-text-content p{
     margin: 1rem 0;
