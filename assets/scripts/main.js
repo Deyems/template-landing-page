@@ -1,4 +1,20 @@
+//Initialize AOS
 AOS.init();
+
+//hANDLE nAVBAR
+var navbar = document.querySelector(".navbar");
+var ham = document.querySelector(".ham");
+ham.addEventListener("click", toggleHamburger);
+function toggleHamburger(){
+  navbar.classList.toggle("showNav")
+  ham.classList.toggle("showClose")
+}
+var menuLinks = document.querySelectorAll(".menu-links");
+menuLinks.forEach( 
+  function(menuLink) { 
+    menuLink.addEventListener("click", toggleHamburger) 
+  }
+)
 //Do  Slide show Here
 let slideIndex = 1;
 showSlides(slideIndex);

@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decagon</title>
-    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Decagon Landing Page</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
     <script src="assets/scripts/main.js" defer></script>
 </head>
 <body>
-    <div class="wrappper">
+    <div class="wrappper">   
         <header class="header-with-bg">
 
-            <nav class="navbar">
+            <nav class="navbar-wrapper">
                 <div class="logo-menu">
                     <div class="logo">
                         <figure>
@@ -21,26 +21,46 @@
                         </figure>
                     </div>
                     <div class="menu">
-                        
+                        <button class="ham"></button>
+                        <div class="navbar">
+                            <ul>
+                                <li><a class="menu-links" href="#">For Developers</a></li>
+                                <li><a class="menu-links" href="#">Blog</a></li>
+                                <li><a class="menu-links shaded" href="#">Get Started</a></li>
+                                <!-- <li><a class="menuLink" href="#">Contacts</a></li> -->
+                            </ul>
+                        </div>
+                        <div class="dkp-menu">
+                            <div></div>
                             <ul class="menu-list">
                                 <li><a href="" class="menu-links">For Developers</a></li>
                                 <li><a href="" class="menu-links">Blog</a></li>
                                 <li><a href="" class="menu-links shaded">Get Started</a></li>
                             </ul>
+                        </div>
                         
                     </div>
                 </div>
                 
-                <div class="mobile-menu">
+                <!-- <div class="mobile-menu">
                     <div class="harmburger">
                         <div class="line"></div>
                         <div class="line"></div>
                         <div class="line"></div>
                     </div>
-                </div>
+                </div> -->
             </nav>
+            
             <div class="header-text">
-                  <h1>Build faster with
+                  <h1 class="lg-screen">Build faster with
+                    <span
+                       class="txt-rotate"
+                       data-period="2000"
+                       data-rotate='[ "vetted", "evaluated", "assesssed", "examined", "trained" ]'>
+                    </span>
+                       remote software engineering talent.
+                  </h1>
+                  <h1 class="mobile-nav-text"><span class="painted">Build faster with</span>
                     <span
                        class="txt-rotate"
                        data-period="2000"

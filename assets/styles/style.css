@@ -16,6 +16,7 @@
     --header-bg:#000000;
     --link-hover-color: #34A853;
     --tinted-text:#B8D344;
+    --light-green: #F5F9E7;
     --round-btn:#C4C4C4;
     --copy-right-greyed: #AFB5C0;
     --active-round-btn: #7C7C7C;
@@ -60,6 +61,7 @@ body{
     font-family: Mulish400, sans-serif;
     /* border: 1px solid red; */
     position: relative;
+    /* overflow-x: hidden; */
 }
 
 .build-team-btn{
@@ -83,34 +85,103 @@ body{
 }
 
 /*Navbar Stuffs start*/
-.navbar{
-    position: fixed;
+.navbar-wrapper{
+    /* position: fixed;
     top: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 0 0.5rem 0;
+    align-items: center; */
+    padding: 0.5rem 0 0.5rem 0.5rem;
     /* border: 2px solid green; */
     width: 90%;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
+
+.ham {
+    position: absolute;
+    /* always keep ham on top of everything */
+    z-index: 1000;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    /* show the menu image */
+    background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+    background-size: 100%;
+    display: none;
+  }
+
+  .showClose {
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+  }
+
+  .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.226);
+  width: 100vw;
+  height: 30vh;
+  overflow: hidden;
+  padding-top: 2rem;
+  /* color: white; */
+  /* hide the menu above the screen by default */
+  transform: translateY(-100%);
+  /* transition adds a little animation when sliding in and out the menu */
+  transition: transform 0.2s ease;
+  /* border: 1px solid coral; */
+}
+
+.showNav {
+  /* show the menu */
+  transform: translateY(0);
+}
+
+.navbar ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    /* align-items: center; */
+  }
+  
+  
+  .navbar ul li a:hover, .navbar ul li a:focus {
+    /* border-bottom: 2px solid white; */
+    background: rgba(0,0,0,0.25);
+  }
+
 
 .logo-menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 1px solid red; */
+    /* border: 1px solid chartreuse; */
     padding: 1rem 0rem 1rem 0;
     width: 100%;
     /* padding-left: 0; */
 }
 
 .menu{
-    min-width: 25%;
-    /* border: 1px solid red; */
+    width: 100%;
+    /* border: 3px solid red; */
+    /* height: 38px; */
 }
 
 .menu-list{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    /* width: 30%; */
+
+}
+
+.dkp-menu{
     display: flex;
     justify-content: space-between;
 }
@@ -139,6 +210,7 @@ body{
     font-size: 0.75rem;
     line-height: 0.9375rem;
     transition: all 0.5s ease-in-out;
+    padding: 1rem;
 }
 
 .shaded:hover{
@@ -179,6 +251,9 @@ body{
     color: var(--gen-white-text);
 }
 
+.mobile-nav-text{
+    display: none;
+}
 
 .header-text h1{
     font-family: Mulish800;
@@ -211,7 +286,7 @@ body{
     padding: 0.8rem;
     margin-bottom: 5rem;
     position: relative;
-    width: 30%;
+    width: 247px;
 }
 
 .overlay-header-btn{
@@ -346,7 +421,8 @@ body{
 .flexb-1 p{
     line-height: 1.5rem;
     opacity: var(--text-opacity);
-    font-size: 1.7vmax;
+    font-size: 1rem;
+    /* font-size: 1.7vmax; */
     /* border: 1px solid brown; */
 }
 
@@ -818,6 +894,7 @@ In the Media Section
 **/
 .footer{
     background: var(--greyed-text-color);
+    padding-bottom: 3rem;
 }
 
 .footer>*{
@@ -836,7 +913,7 @@ In the Media Section
 .build-team h2{
     font-family: Mulish800;
     font-size: 3.125rem;
-    line-height: 0rem;
+    /* line-height: 0rem; */
     color: var(--gen-white-text);
     /* border: 1px solid red; */
     margin: 2.5rem 0;
@@ -851,7 +928,7 @@ In the Media Section
 .footer-btn{
     position: relative;
     border: 1px solid var(--gen-white-text);
-    width: 25%;
+    width: 247px;
     margin: 1rem auto;
     padding: 1rem 0;
 }
@@ -864,6 +941,7 @@ In the Media Section
 
 .social-media-icons{
     display: flex;
+    justify-content: center;
 }
 
 .footer-links>*{
@@ -925,19 +1003,257 @@ In the Media Section
     display: none;
 }
 
-@media screen and (max-width: 1100px){
-    body{
-        border: 2px solid red;
+@media screen and (max-width: 960px){
+    .header-with-bg {
+        padding: 1px;
     }
-    .why-container{
-        /* display: block; */
+            
+    
+    .hiring-organizations{
+        padding-left: 1rem;
+        /* overflow: hidden; */
+    }
+    .hire-org-cover{
+        display: block;
+        text-align: center;
+    }
+    .companies{
+        margin: 1.3rem 0;
+    }
+    .companies figure{
+        margin: 0 1rem;
+    }
+    
+    .flexb{
+        display: block;
+    }
+    .flexb-1{
+        padding: 1.5rem 2.0vmax;
+    }
+    .why-label{
+        background: var(--light-green);
+    }
+    .why-label p{
+        width: 100%;
+        font-size: 1.33rem;
+    }
+    
+    .img-testifier img{
+        display: block;
+        width: 100%;
+    }
+    .testifier-text-content{
+        width: 100%;
+        padding: 0.8rem;
+    }
+    .arrow-btns-wrapper{
+        width: 22%;
+    }
+    .arrow-btns-circle {
+        margin: 0 0.4rem;
+    }
+    .decagon-leaders-header{
+        text-align: left;
+    }
+    
+    .leader-card{
+        margin: 1.5rem 0.75rem;
+    }
+    
+    .partners{
+        /* width: 100%; */
+        padding: 1.3rem 1.6rem;
+        /* overflow: hidden; */
+    }
+    .partners span{
+        margin: 0 1rem;
+    }
+    .skill-bank{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    
+    .media-card{
+        margin: 1.8rem 0.7rem;
+        width: 100%;
+    }
+    
+    
+    @media screen and (max-width: 560px){
+        .header-with-bg {
+            padding: 1px;
+        }
+                
+        .navbar-wrapper{
+            /* border: 1px solid purple; */
+            /* display: block; */
+            width: 100%;
+        }
+        .ham{
+            display: block;
+        }
+        /**JS to control this*/
+        .logo-menu{
+            display: block;
+            /* border: 1px solid brown; */
+        }
+        .menu-list{
+            display: none;
+        }
+        .menu-list li{
+            height: auto;
+            margin: 1rem 0;
+        }
+        .menu-links{
+            /* border: 2px solid yellow; */
+            margin: 1rem 0;
+            display: block;
+            width: 100%;
+        }
+        .dkp-menu{
+            display: none;
+        }
+        .mobile-menu{
+            display: block;
+            /* border: 1px solid red; */
+        }
+        .lg-screen{
+            display: none;
+        }
+        .mobile-nav-text{
+            display: block;
+            /* border: 1px solid green; */
+        }
+        .header-btn{
+            width: 80%;
+        }
+        .hiring-organizations{
+            padding-left: 1rem;
+            overflow: hidden;
+        }
+        .hire-org-cover{
+            display: block;
+            text-align: center;
+        }
+        .companies{
+            margin: 1.3rem 0;
+        }
+        .companies figure{
+            margin: 0 1rem;
+        }
+        .why-container {
+            display: block;
+        }
+        .flexb{
+            display: block;
+        }
+        .flexb-1{
+            padding: 1.5rem 2.0vmax;
+        }
+        .why-label{
+            background: var(--light-green);
+        }
+        .why-label p{
+            width: 100%;
+            font-size: 1.33rem;
+        }
+        .video-testifier{
+            display: block;
+        }
+        .img-testifier{
+            margin-bottom: 1.5rem;
+        }
+        .img-testifier img{
+            display: block;
+            width: 100%;
+        }
+        .testifier-text-content{
+            width: 100%;
+            padding: 0.8rem;
+        }
+        .arrow-btns-wrapper{
+            width: 22%;
+        }
+        .arrow-btns-circle {
+            margin: 0 0.4rem;
+        }
+        .decagon-leaders-header{
+            text-align: left;
+        }
+        .leaders{
+            display: block;
+        }
+        .leaders:nth-of-type(3){
+            /* border: 1px solid red; */
+            display: none;
+        }
+        .leader-card{
+            margin: 1.5rem 0;
+        }
+        .load-all{
+            display: block;
+        }
+        .partners{
+            width: 100%;
+            padding: 1.3rem 1.6rem;
+            overflow: hidden;
+        }
+        .partners span{
+            margin: 0 1rem;
+        }
+        .skill-bank{
+            width: 100%;
+            padding: 2rem 1rem;
+        }
+        .skill-bank h2{
+            text-align: left;
+            font-size: 1.5625rem; 
+            line-height: 1.9375rem;
+            width: 67%;
+        }
+        .skill-bank h4{
+            text-align: left;
+            width: 61%;
+            font-size: 1rem;
+        }
+        .skill-bank-list{
+            display: block;
+        }
+        .media-pages{
+            display: block;
+        }
+        .media-card{
+            margin: 1.8rem 0;
+            width: 100%;
+        }
+        .footer-btn{
+            width: 100%;
+        }
+        .social-icons{
+            display: none;
+        }
+        .nav-links{
+            display: block;
+        }
+        .info-location{
+            justify-content: space-between;
+        }
+        .mobile-footer-links{
+            display: block;
+        }
+        .build-team>div{
+            padding: 3rem 0.5rem;
+        }
     }
     @media screen and (max-width: 380px){
         .header-text{
             width: 100%;
         }
-        .hire-org-cover{
+        /* .hire-org-cover{
             display: block;
-        }
+        } */
+        /* .navbar-wrapper{
+            /* border: 1px solid red; 
+        } */
     }
 }
