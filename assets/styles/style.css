@@ -251,6 +251,10 @@ body{
     color: var(--gen-white-text);
 }
 
+.txt-rotate{
+	color: var(--tinted-text);
+}
+
 .mobile-nav-text{
     display: none;
 }
